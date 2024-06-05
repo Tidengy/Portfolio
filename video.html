@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversible Mirror</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Reversible Mirror</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Reversible Mirror</h1>
+        <div class="nav">
+            <a href="index.html" class="home-link">Home</a>
+            <a href="message.html" class="home-link">Massage Board</a>
+            <a href="video.html" class="home-link">Video</a>
+        </div>
+    </div>
+</body>
+<style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+    #progress-bar {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <video id="my-video" autoplay loop controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <input type="range" id="progress-bar" value="0" step="1">
+  </div>
+
+  <script>
+    var video = document.getElementById('my-video');
+    var progressBar = document.getElementById('progress-bar');
+
+    progressBar.addEventListener('input', function() {
+      var time = video.duration * (progressBar.value / 100);
+      video.currentTime = time;
+    });
+
+    video.addEventListener('timeupdate', function() {
+      var value = (video.currentTime / video.duration) * 100;
+      progressBar.value = value;
+    });
+  </script>
+</body>
+</html>
+
