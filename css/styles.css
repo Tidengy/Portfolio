@@ -1,0 +1,67 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .home-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* 扣除标题栏的高度 */
+}
+
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    font-family: 'Monoton', cursive;
+    color: white;
+    font-size: 60px;
+}
+
+.start-button {
+    font-size: 36px;
+    padding: 10px 30px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    margin-top: 300px;
+    transition: border-radius 0.2s, opacity 0.2s;
+}
+
+.start-button:hover {
+    background-color: rgb(115, 115, 115);
+    border-radius: 30px;
+    opacity: 0.7;
+}

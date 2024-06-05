@@ -1,0 +1,127 @@
+/* new1.css */
+
+body {
+    margin: 0;
+    background-image: url(../img/net.png);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .home-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* 扣除标题栏的高度 */
+}
+
+.弹窗 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 30%;
+    height: 700px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    padding: 20px 40px;
+    top: 10%;
+    left: 35%;
+    border-radius: 10px;
+    overflow: scroll ;
+}
+
+.弹窗 button {
+    margin: -15px -10px 0 auto ;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-radius 0s, opacity 0.2s;
+}
+
+.弹窗 button:hover {
+    background-color: rgb(196, 196, 196);
+    opacity: 0.9;
+}
+
+
+.弹窗 img {
+    width: 350px; /* 调整图片的宽度 */
+    height: 250px; /* 调整图片的高度 */
+    object-fit: cover; /* 保持图片比例 */;
+    position: relative;
+    top: 0%;
+}
+
+.弹窗 h1, .弹窗 h2, .弹窗 h3, .弹窗 h4, .弹窗 h5, .弹窗 p {
+    text-align: left; /* 设置文字左对齐 */
+}
+
+.弹窗 h1 {
+    font-size: 15px; 
+    margin-bottom: 0px;
+}
+
+.弹窗 p {
+    font-size: 10px; 
+}
+
+.弹窗 h2 {
+    font-size: 10px; 
+    background-color: rgb(182, 180, 180);
+    padding: 5px; /* 文字与背景之间的内边距 */
+    border-radius: 5px; /* 文字的圆角 */
+    margin-bottom: -7px;
+}
+
+.弹窗 h3 {
+    font-size: 10px; 
+    background-color: rgb(182, 180, 180);
+    padding: 5px; /* 文字与背景之间的内边距 */
+    border-radius: 5px; /* 文字的圆角 */
+    margin-bottom: -10px;
+}
+
+.弹窗 h4 {
+    font-size: 10px; 
+    background-color: rgb(182, 180, 180);
+    padding: 5px; /* 文字与背景之间的内边距 */
+    border-radius: 5px; /* 文字的圆角 */
+    margin-bottom: -13px;
+}
+
+.弹窗 h5 {
+    font-size: 10px; 
+    background-color: rgb(182, 180, 180);
+    padding: 5px; /* 文字与背景之间的内边距 */
+    border-radius: 5px; /* 文字的圆角 */
+}
